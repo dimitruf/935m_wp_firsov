@@ -1,0 +1,152 @@
+/* свойства всего документа */
+html, body 
+{
+  	font:16px Arial, Helvetica, sans-serif;
+  	color:#FFFFFF;
+	background-image:url("фон.jpg");
+  /*	background:#B0C4DE;*/
+  	text-align:center;
+  	border:0;
+}
+
+.top td
+{
+	height:15%;
+	text-align:center;
+}
+/* свойства основной таблицы */
+.table
+{
+	margin:0 auto;
+	width:80%;
+	height:100%;
+	/*background:#B0C4DE;*/
+	border-collapse: separate; 
+}
+/* общие свойства верхней, нижней части сайта, области контента и меню */
+.top, .content, .menu, .bottom
+{
+	width:100%;
+  	height:100%;
+}
+/* дополнительные свойства верхней части сайта */
+.top
+{
+	border-spacing:0;
+}
+.menu
+{
+	font:24px Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+}
+/* общие свойства левой и правой области верхней части сайта */
+.top_left, .top_right
+{
+	/*border:1px solid #000;*/
+	padding:5px 20px;
+	background:#1E90FF;
+}
+/* дополнительные свойства левой области верхней части сайта */
+.top_left
+{
+	width:60%;
+	/*border-radius:8px 0 0 8px;*/
+	border-right-width:0;
+	text-align:left;
+}
+/* дополнительные свойства правой области верхней части сайта */
+.top_right
+{
+	width:40%;
+/*	border-radius:0 8px 8px 0;*/
+	border-left-width:0;
+	text-align:right;
+}
+/* свойства нижней части сайта */
+.bottom
+{
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+	background:#000000;
+}
+/* общие свойства областей контента и меню */
+.menu td, .content_td
+{
+/*	border:1px solid #000;*/
+	/*border-radius:10px;*/
+	vertical-align:top;
+	text-align:left;
+	padding:20px 20px;
+	position:relative;
+		width:25%; 
+	height:75%;
+}
+/* дополнительные свойства области меню */
+.menu td
+{
+	background:#0000CD;
+}	
+
+.table p
+{
+	align: center;
+}
+
+.content td
+{
+	width:600px; 
+	height:100%;
+}
+
+.bottom td
+{
+	height:5%;
+	
+}
+.table1
+{
+	width:500px;
+	border:3px solid #fff;
+}
+.table1 td
+{
+	border:3px solid #fff;
+}
+
+
+
+.mytext
+{
+	text-align:left;
+}
+
+
+.table2
+{
+	border:3px solid #fff;
+	width:50%;
+}
+.table2 td
+{
+	padding:5;
+	border:3px solid #fff;
+	border-collapse:collapse;
+	width:50%;
+	text-align:left;
+}
+.table2 tr
+{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+	
