@@ -112,9 +112,20 @@ html, body
 .table1 td
 {
 	border:3px solid #fff;
+	width: 50px;
+	height: 45px;
 }
 
+.table1 tr { height: 45px; }
 
+
+.firsttd {
+	width: 75em;
+}
+.blue { background-color: blue; }
+.green { background-color: green; }
+.red { background-color: red; }
+.yellow { background-color: yellow; }
 
 .mytext
 {
@@ -140,6 +151,52 @@ html, body
 	width:100%;
 }
 
+.catalog
+{
+	
+	border:3px solid #fff;
+}
+.catalog td,th
+{
+	border:3px solid #fff;
+}
+
+.catalog th
+{
+	background-color:#0000CD;
+}
+
+.item {
+	border:3px solid #fff;
+}
+
+.item th {
+	background-color:#0000CD;
+	text-align:center;
+	padding: 5px 5px;
+}
+
+.item td {
+	border:3px solid #fff;
+	text-align:left;
+	padding: 5px 5px;
+}
+
+.catalog-link:link {
+  color: #ffffff; 
+  border-bottom: 1px; 
+}
+.catalog-link:visited {
+  color: #ffffff;
+}
+.catalog-link:hover {
+  color: #EF7D55; 
+  border-bottom: .07em solid;
+}
+.catalog-link:active {
+  color: #ffffff; 
+  border-bottom: 1px;
+}
 
 
 

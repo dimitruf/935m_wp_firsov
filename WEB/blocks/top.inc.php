@@ -8,7 +8,12 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" class="top_left"><strong> Авторизация </strong></td>
+			<td colspan="2" class="top_left">
+			<?php
+				if (!empty($_SESSION['login']))
+					echo "Привет,<b>".$_SESSION['login']."</b><a href='index.php?exit=true'>(Выход)</a>";
+			?> 
+			</td>
 			<td class="top_right"><strong> Поиск </strong></td>
 		</tr>
 	</table>

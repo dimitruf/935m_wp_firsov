@@ -4,7 +4,8 @@
 		<table class="bottom">
 			<tr>
 				<td>
-					Системное время: <?=date("d.m.Y H:i")?>
+					Последний визит: <?=$lastVisit?>
+					<br/> Системное время: <?=date("d.m.Y H:i")?>
 					<br/> Информация о сервере: <?=$_SERVER['SERVER_SOFTWARE']?>
 				</td>
 			</tr>
