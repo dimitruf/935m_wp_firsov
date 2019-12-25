@@ -55,10 +55,23 @@
 				$Size = getimagesize($_FILES['item-img']['tmp_name']); 
 				$Tmp = imagecreatetruecolor(300, 300);
 				imagecopyresampled($Tmp, $Image, 0, 0, 0, 0, 300, 300, $Size[0], $Size[1]);
-				if (isset($_POST["add"]))
-					$img = count($_SESSION['catalog']);
-				else 
-					$img = $_SESSION['catalog'][$_GET['id']]['image'];
+				include "base_reg.php";
+				$link = mysqli_connect($host, $user, $password, $database) or die("Не удалось подключиться к БД"); 
+				mysqli_set_charset($link,"utf8");
+				if (isset($_POST["add"])){				
+					
+					$query = "SELECT id FROM items order by id desc";
+					$result = mysqli_query($link,$query) or die("Ошибка!" . mysqli_error($link));
+					$result = $result->fetch_assoc();					
+					mysqli_close($link);
+					$img = $result['id']+1;
+				}
+				else {
+					$query = "SELECT image FROM items where id =".$_GET['id']." ";
+					$result = mysqli_query($link,$query) or die("Ошибка!" . mysqli_error($link));
+					$result = $result->fetch_assoc();	
+					$img = $result['image'];
+				}
 				if ($img=="no-image") $img = $_GET['id'];
 				imagejpeg($Tmp, 'images/catalog/'.$img.'.jpg'); // сохраняем 
 				imagedestroy($Image);

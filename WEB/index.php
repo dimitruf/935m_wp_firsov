@@ -6,7 +6,7 @@
 	header("Content-Type: text/html; charset=utf-8");
 	header("Cache-control: no-store");
 	include "lib.inc.php";
-	
+	include "base_reg.php";
 	if (isset($_COOKIE['lastVisit']))
 		$lastVisit = $_COOKIE['lastVisit'];	
 	setcookie('lastVisit',date('Y-m-d H:i:s'),time()+0xFFFFFFF);
@@ -45,7 +45,8 @@
 								{
 									case 'lab1': include 'lab_rab1.html'; break;
 									case 'lab2': include 'lab_rab2.php'; break;
-									case 'lab3': include 'lab_rab3.php'; break;				
+									case 'lab3': include 'lab_rab3.php'; break;		
+									case 'lab4': include 'lab_rab4.php'; break;										
 									case 'catalog': include 'catalog.php';break;	
 									case 'add': include 'add.php'; break;
 									case 'item': include 'item.php'; break;	
@@ -62,7 +63,12 @@
 													encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';break;
 								}
 							}			
-							else include 'auth.php';		
+							else{
+								if ($page=="registration")
+									include 'registration.php';	
+								else	
+									include 'auth.php';		
+							}
 						?>					
 					</td>
 				</tr>

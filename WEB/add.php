@@ -1,26 +1,36 @@
 ﻿<h3><center>Добавить товар</center></h3> 
 <?php   
 	if (isset($_POST['add']))
-	{	 
+	{	
+		
 		if (!empty($_POST['name']) && !empty($_POST['article']) && !empty($_POST['manufacturer']) && !empty($_POST['price']) && !empty($_POST['description']))
 		{	
 			$image = "no-image";  // устанавливаем по умолчанию что у товара нет изображения
-			if ($_FILES['item-img']['tmp_name']) // если выбрали изображение
-				$image = loadImage(); // грузим его
-			if ($image != "error"){  // если нет никаких ошибок добавляем в каталог
-				$data = array (
-					"name"=>clearData($_POST['name']),
-					"article"=>clearData($_POST['article']),
-					"manufacturer"=>clearData($_POST['manufacturer']),
-					"price"=>clearData($_POST['price']),
-					"equipment"=>clearData($_POST['equipment']),
-					"description"=>clearData($_POST['description']),
-					"image"=>$image
-				);
-				array_push($_SESSION['catalog'], $data); // добавляем массив с данными в сессию		
-				header("Location: index.php?page=catalog");
-				exit;
+			$name = clearData($_POST['name']);
+			$article = clearData($_POST['article']);
+			$manufacturer = clearData($_POST['manufacturer']);
+			$equipment = clearData($_POST['equipment']);
+			$description = clearData($_POST['description']);
+			$price = clearData($_POST['price']);
+			$connect = mysqli_connect($host, $user, $password, $database) or die("Не удалось подключиться к БД"); 
+			mysqli_set_charset($connect,"utf8");
+			// проверяем нет ли в таблицы записи с таким названием
+			$query = "SELECT id FROM items WHERE name = '$name' ";
+			$result = mysqli_query($connect,$query) or die("Ошибка проверки названия!" . mysqli_error($connect));			
+			if (count($result->fetch_assoc()) == 0) // если таки наименованй нет, то добавляем запись	
+			{			
+				if ($_FILES['item-img']['tmp_name']) // если выбрали изображение
+					$image = loadImage(); // грузим его
+				if ($image != "error"){  // если нет никаких ошибок добавляем в каталог
+					$query = "INSERT INTO items (name,article,manufacturer,equipment,price,description,image) VALUES ('$name','$article','$manufacturer','$equipment','$price','$description','$image')";		
+					$result = mysqli_query($connect,$query) or die("Ошибка добавления записи!" . mysqli_error($connect));
+					mysqli_close($connect);
+					header("Location: index.php?page=catalog");
+					exit;
+				}
 			}
+			else 
+				echo '<center><font color="red"><b>Товар с таким названием уже есть в таблице!</b></font></center><br>';
 		}
 		else 
 			echo '<center><font color="red"><b>Заполните все поля!</b></font></center><br>';	
