@@ -1,0 +1,68 @@
+<h3>Форма, заполняемая при почтовом отправлении:</h3>
+<form action="POST">
+<table class="table2">
+ 	<tr>
+ 		<td>От кого(ФИО): </td>
+    	<td> <input type="text" name="fromfio" size="79" maxlength="70" /></td>
+  	</tr>
+ 	 <tr>
+    	<td>Откуда(Адрес):</td>
+    	<td> <input type="text" name="fromaddress" size="79" maxlength="200" /></td>
+  	</tr>
+  	<tr>
+    	<td>Индекс отправителя: </td>
+    	<td> <input type="text" name="fromindex" size="79" maxlength="20" /></td>
+  	</tr>
+  	<tr>
+    	<td>Кому(ФИО): </td>
+    	<td> <input type="text" name="forfio" size="79" maxlength="70" /></td>
+  	</tr>
+  	<tr>
+    	<td>Куда(Адрес): </td>
+    	<td> <input type="text" name="foraddress" size="79" maxlength="200" /></td>
+  	</tr>
+	<tr>
+    	<td>Индекс получателя: </td>
+    	<td> <input type="text" name="forindex" size="79" maxlength="20" /></td>
+  	</tr>
+  	<tr>
+    	<td colspan="2">Тип посылки:</td>
+  	</tr>
+  	<tr>
+    	<td>
+     		<input type="radio" name="package" value="yes" />Простая<br/>
+     		<input type="radio" name="package" value="yes" />Заказная<br/>
+    	</td>
+    	<td>
+     		<input type="radio" name="package" value="yes" />С уведомлением<br/>
+     		<input type="radio" name="package" value="yes" />С описью<br/>
+   	 	</td>
+  	</tr>
+	<tr>
+    	<td colspan="2">Наложенный платеж: </td>
+  	</tr>
+	<tr>
+ 		<td colspan="2">
+		<input type="checkbox" name="pay" value="yes" />Да<br/>
+		</td>
+  	</tr>
+  	<tr>
+ 		<td>Вес: </td>
+    	<td> <input type="text" name="weight" size="79" maxlength="20" /></td>
+  	</tr>
+	<tr>
+ 		<td >Стоимость: </td>
+    	<td > <input type="text" name="ammount" size="79" maxlength="20" /></td>
+  	</tr>
+</table>
+<br/>
+<div class="mytext">
+<textarea name="comments" cols="40" rows="4">
+Описание к посылке:
+</textarea>
+<br/>
+<input type="submit" value="Отправить" />
+<input type="reset" value="Сброс данных" />
+</div>
+</form>
+

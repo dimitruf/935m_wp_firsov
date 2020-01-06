@@ -1,0 +1,222 @@
+/* свойства всего документа */
+html, body 
+{
+  	font:16px Arial, Helvetica, sans-serif;
+  	color:#000000;
+	background:url("images/1.jpg") no-repeat;
+  	text-align:center;
+  	border:0;
+	background-size: auto;
+	height: 0;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+
+
+ a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   } 
+
+.top td
+{
+	height:15%;
+	text-align:center;
+}
+
+/* свойства основной таблицы */
+.table
+{
+	margin:0 auto;
+	width:80%;
+	height:100%;
+	border-collapse: separate; 
+}
+
+/* общие свойства верхней, нижней части сайта, области контента и меню */
+.top, .content, .menu, .bottom
+{
+	width:100%;
+  	height:100%;
+}
+
+/* дополнительные свойства верхней части сайта */
+.top
+{
+	border-spacing:0;
+}
+
+.menu
+{
+	font:24px Arial, Helvetica, sans-serif;
+}
+
+/* общие свойства левой и правой области верхней части сайта */
+.top_left, .top_right
+{
+	padding:5px 20px;
+}
+
+/* дополнительные свойства левой области верхней части сайта */
+.top_left
+{
+	width:60%;
+	border-right-width:0;
+	text-align:left;
+}
+
+/* дополнительные свойства правой области верхней части сайта */
+.top_right
+{
+	width:40%;
+	border-left-width:0;
+	text-align:right;
+}
+
+/* свойства нижней части сайта */
+.bottom
+{
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+}
+
+/* общие свойства областей контента и меню */
+.menu td, .content_td
+{
+	vertical-align:top;
+	text-align:left;
+	padding:20px 20px;
+	position:relative;
+	width:25%; 
+	height:75%;
+}
+
+/* дополнительные свойства области меню */
+.menu td
+{
+/*	background:#0000CD;*/
+}	
+
+.table p
+{
+	align: center;
+}
+
+.content td
+{
+	width:600px; 
+	height:100%;
+}
+
+.bottom td
+{
+	height:5%;
+	
+}
+
+.table1
+{
+	width:500px;
+	border:3px solid #000000;
+}
+
+.table1 td
+{
+	border:3px solid #000000;
+	width: 50px;
+	height: 45px;
+}
+
+.table1 tr { height: 45px; }
+
+
+.firsttd {
+	width: 75em;
+}
+.blue { background-color: blue; }
+.green { background-color: green; }
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+
+.mytext
+{
+	text-align:left;
+}
+
+
+.table2
+{
+	border:3px solid #000000;
+	width:80%;
+}
+
+.table2 td
+{
+	padding:5;
+	border:3px solid #000000;
+	border-collapse:collapse;
+	width:50%;
+	text-align:left;
+}
+
+.table2 tr
+{
+	width:100%;
+}
+
+.catalog
+{
+	border:3px solid #000000;
+}
+
+.catalog td,th
+{
+	border:3px solid #000000;
+}
+
+.catalog th
+{
+	/*background-color:#0000CD;*/
+}
+
+.item {
+	border:3px solid #000000;
+}
+
+.item th {
+	text-align:center;
+	padding: 5px 5px;
+}
+
+.item td {
+	border:3px solid #000000;
+	text-align:left;
+	padding: 5px 5px;
+}
+
+ .catalog-link:link {
+  color: #000000; 
+  border-bottom: 1px; 
+}
+
+.catalog-link:visited {
+  color: #000000;
+}
+
+
+.catalog-link:active {
+  color: #000000; 
+  border-bottom: 1px;
+} 
+
+
+
+
+
+
+
+
+
+	
